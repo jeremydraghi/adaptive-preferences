@@ -102,8 +102,8 @@ temp = foreach(rep=1:totalRuns, .packages=("dqrng"), .noexport= c("pickParents",
 		}
 		if(crowding == FALSE)
 		{
-			 #newPop = pickParents(N, pop, fits, p, c, r, dqrunif(5*N))
-			 newPop = pickParentsFreePref(N, pop, fits, p, c, r, dqrunif(5*N))
+			 newPop = pickParents(N, pop, fits, p, c, r, dqrunif(5*N))
+			 #newPop = pickParentsFreePref(N, pop, fits, p, c, r, dqrunif(5*N))
 		}
 		if(crowding == TRUE) newPop = pickParentsCrowding(N, pop, fits, p, c, r, dqrunif(5*N))
 		
